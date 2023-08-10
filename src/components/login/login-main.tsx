@@ -31,10 +31,10 @@ export function LoginMain(): JSX.Element {
         <div className='flex max-w-xs flex-col gap-4 font-twitter-chirp-extended lg:max-w-none lg:gap-16'>
           <h1
             className='text-3xl before:content-["See_what’s_happening_in_the_world_right_now."] 
-                       lg:text-6xl lg:before:content-["Happening_now"]'
+                       lg:text-6xl lg:before:content-["Events_Happening_now"]'
           />
           <h2 className='hidden text-xl lg:block lg:text-3xl'>
-            Join Twitter today.
+            Join EventEAS today.
           </h2>
         </div>
         <div className='flex max-w-xs flex-col gap-6 [&_button]:py-2'>
@@ -60,10 +60,10 @@ export function LoginMain(): JSX.Element {
               <i className='border-b border-light-border dark:border-dark-border' />
             </div>
             <Button
-              className='cursor-not-allowed bg-accent-blue text-white transition hover:brightness-90
+              className='bg-accent-blue text-white transition hover:brightness-90
                          focus-visible:!ring-accent-blue/80 focus-visible:brightness-90 active:brightness-75'
             >
-              Sign up with phone or email
+              Sign up World ID
             </Button>
             <p
               className='inner:custom-underline inner:custom-underline text-center text-xs
@@ -104,7 +104,15 @@ export function LoginMain(): JSX.Element {
                          dark:border-light-secondary'
               onClick={signInWithGoogle}
             >
-              Sign in
+              Sign in with Google 
+            </Button>
+
+            <Button
+              className=' bg-accent-blue text-white transition hover:brightness-90
+                         focus-visible:!ring-accent-blue/80 focus-visible:brightness-90 active:brightness-75'
+              onClick={signInWithGoogle}
+            >
+              Sign in with Metamask
             </Button>
           </div>
         </div>

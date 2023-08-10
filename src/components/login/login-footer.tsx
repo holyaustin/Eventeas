@@ -1,23 +1,23 @@
 const footerLinks = [
-  ['About', 'https://about.twitter.com'],
-  ['Help Center', 'https://help.twitter.com'],
-  ['Privacy Policy', 'https://twitter.com/tos'],
-  ['Cookie Policy', 'https://support.twitter.com/articles/20170514'],
-  ['Accessibility', 'https://help.twitter.com/resources/accessibility'],
+  ['About', ''],
+  ['Help Center', ''],
+  ['Privacy Policy', ''],
+  ['Cookie Policy', ''],
+  ['Accessibility', ''],
   [
     'Ads Info',
-    'https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html'
+    ''
   ],
-  ['Blog', 'https://blog.twitter.com'],
-  ['Status', 'https://status.twitterstat.us'],
-  ['Careers', 'https://careers.twitter.com'],
-  ['Brand Resources', 'https://about.twitter.com/press/brand-assets'],
-  ['Advertising', 'https://ads.twitter.com/?ref=gl-tw-tw-twitter-advertise'],
-  ['Marketing', 'https://marketing.twitter.com'],
-  ['Twitter for Business', 'https://business.twitter.com'],
-  ['Developers', 'https://developer.twitter.com'],
-  ['Directory', 'https://twitter.com/i/directory/profiles'],
-  ['Settings', 'https://twitter.com/settings']
+  ['Optimism', 'https://www.optimism.io/'],
+  ['Zora', 'https://zora.co/'],
+  ['Base', 'https://base.org/'],
+  ['World Coin', 'https://worldcoin.org'],
+  ['Hyperlane', 'https://hyperlane.xyz/'],
+  ['Mode', 'https://mode.network/'],
+  ['LayerZero', 'https://business.twitter.com'],
+  ['ChainLink', 'https://chain.link/'],
+  ['The Graph', 'https://thegraph.com/'],
+  ['Ethereum Attestation Service', 'https://attest.sh/']
 ] as const;
 
 export function LoginFooter(): JSX.Element {
@@ -35,7 +35,7 @@ export function LoginFooter(): JSX.Element {
             {linkName}
           </a>
         ))}
-        <p>© 2022 Twitter, Inc.</p>
+        <p>© 2023 EventEAS, Inc.</p>
       </nav>
     </footer>
   );
