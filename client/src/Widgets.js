@@ -3,7 +3,7 @@ import "./Widgets.css";
 import {
   TwitterTimelineEmbed,
   TwitterShareButton,
-  TwitterTweetEmbed,
+  //TwitterTweetEmbed,
 } from "react-twitter-embed";
 import SearchIcon from "@material-ui/icons/Search";
 
@@ -16,17 +16,17 @@ function Widgets() {
       </div>
 
       <div className="widgets__widgetContainer">
-        <h2>What's happening</h2>
+        <h2>Events happening</h2>
 
         <TwitterTimelineEmbed
           sourceType="profile"
-          screenName="kmmtmm92"
+          screenName="optimismFND"
           options={{ height: 800 }}
         />
 
         <TwitterShareButton
-          url={"https://facebook.com/cleverprogrammer"}
-          options={{ text: "#reactjs is awesome", via: "cleverqazi" }}
+          url={"https://eventeas.vercel.app/"}
+          options={{ text: "Eventeas is an  awesome project. Try the #web3 version of #twitter with EAS @optimismFND Zora Base Worldcoin TheGraph", via: "holyaustin" }}
         />
       </div>
     </div>

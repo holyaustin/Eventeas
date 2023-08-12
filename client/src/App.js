@@ -4,6 +4,10 @@ import Feed from "./Feed";
 import Widgets from "./Widgets";
 import "./App.css";
 import { useState, useEffect } from "react";
+import { LoginMain } from './components/login/login-main.tsx';
+import { LoginFooter } from './components/login/login-footer.tsx';
+import { CustomIcon } from './components/ui/custom-icon.tsx';
+import { Button } from './components/ui/button.tsx';
 
 function App() {
 
@@ -48,6 +52,8 @@ function App() {
 
     if (chainId !== rinkebyChainId) {
       setCorrectNetwork(false)
+      console.log('Error - Connected to the wrong chain, Connect to optimism Testnet',)
+      alert('Wrong Network - Please connect to Optimism Testnet!')
     } else {
       setCorrectNetwork(true)
     }
@@ -55,20 +61,63 @@ function App() {
 
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
-    connectWallet();
+    //connectWallet();
     checkCorrectNetwork();
   });
 
   return (
-    // BEM
-    <div>
-    {currentAccount === '' ? (
-      <button
-      className='text-2xl font-bold py-3 px-12 bg-[#f1c232] rounded-lg mb-10 hover:scale-105 transition duration-500 ease-in-out'
-      onClick={connectWallet}
-      >
-      Connect Wallet
-      </button>
+    <>
+    <div className=''>
+      {currentAccount === '' ? (
+        <main className='grid lg:grid-cols-[1fr,45vw] min-h-screen'>
+          <div className='relative hidden items-center justify-center  lg:flex'>
+            <img
+              className='object-cover h-full'
+              //blurClassName='bg-accent-blue'
+              src='/assets/twitter-banner.png'
+              alt='Twitter banner'
+              layout='fill'
+              //useSkeleton
+            />
+            <i className='absolute'>
+              <CustomIcon className='h-96 w-96 text-white' 
+              iconName='TwitterIcon' 
+              />      
+            </i>
+          </div>
+
+
+          <div className='flex flex-col items-center justify-between gap-6 p-8 lg:items-start   lg:justify-center'>
+      
+        <i className='mb-0 self-center lg:mb-10 lg:self-auto'>
+        <CustomIcon
+          className='-mt-4 h-6 w-6 text-accent-blue lg:h-12 lg:w-12 dark:lg:text-twitter-icon'
+          iconName='TwitterIcon'
+        />
+        </i>
+   
+        <div className='flex font-extrabold max-w-xs flex-col gap-4 font-twitter-chirp-extended lg:max-w-none lg:gap-16'>
+        <h1
+          className='text-center text-3xl before:content-["See_what’s_happening_in_the_world_right_now."] 
+                     lg:text-6xl lg:before:content-["Events_Happening_now"]'
+        />
+         
+        <h2 className='hidden text-xl lg:block lg:text-3xl'>
+          Join EventEAS today.
+        </h2>
+
+        <button
+          className='text-3xl font-bold px-12 bg-sky-600 mb-10 hover:scale-110 transition duration-500 ease-in-out py-7 rounded-full'
+          onClick={connectWallet}
+          >
+          Connect Wallet
+          </button>
+
+        </div>
+        </div>
+
+         
+      </main>
       ) : correctNetwork ? (
         <div className="app">
           <Sidebar />
@@ -82,9 +131,11 @@ function App() {
       <div>and reload the page</div>
       <div>----------------------------------------</div>
       </div>
-    )}
+      )}
+    
+      <LoginFooter />
     </div>
-
+    </>
   );
 }
 
