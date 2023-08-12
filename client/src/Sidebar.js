@@ -50,11 +50,6 @@ function Sidebar() {
         Tweet
       </Button>
 
-      {/* Button -> Tweet */}
-      <Button variant="outlined" className="sidebar__tweet" fullWidth>
-        Tweet
-      </Button>
-
       <button
           className='mt-10 text-lg font-bold px-12 bg-sky-600 mb-5 mr-10 hover:scale-110 transition duration-500 ease-in-out py-4 w-full rounded-full absolute bottom-0 left-0 '
           onClick={connectWallet}

@@ -5,6 +5,7 @@ import { generateRandomAvatarOptions } from './avatar';
 import { Button } from "@material-ui/core";
 //import axios from 'axios';
 import { TwitterContractAddress } from './config.js';
+import { TwitterContractAddressMode } from './config.js';
 import {ethers} from 'ethers';
 import Twitter from './utils/TwitterContract.json'
 
@@ -26,7 +27,7 @@ function TweetBox() {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const TwitterContract = new ethers.Contract(
-          TwitterContractAddress,
+          TwitterContractAddressMode,
           Twitter.abi,
           signer
         )
@@ -72,6 +73,7 @@ function TweetBox() {
             placeholder="What's happening?"
             type="text"
           />
+
         </div>
         <input
           value={tweetImage}

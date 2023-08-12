@@ -4,10 +4,12 @@ import Post from "./Post";
 import "./Feed.css";
 import FlipMove from "react-flip-move";
 // import axios from 'axios';
-import { TwitterContractAddress } from './config.js';
+//import { TwitterContractAddress } from './config.js';
+import { TwitterContractAddressMode } from './config.js';
 import {ethers} from 'ethers';
 import Twitter from './utils/TwitterContract.json'
 
+console.log("contract address = ", TwitterContractAddressMode);
 
 function Feed({personal}) {
   const [posts, setPosts] = useState([]);
@@ -46,8 +48,9 @@ function Feed({personal}) {
       if(ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
+        console.log("contract address = ", TwitterContractAddressMode);
         const TwitterContract = new ethers.Contract(
-          TwitterContractAddress,
+          TwitterContractAddressMode,
           Twitter.abi,
           signer
         )
@@ -78,7 +81,7 @@ function Feed({personal}) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const TwitterContract = new ethers.Contract(
-          TwitterContractAddress,
+          TwitterContractAddressMode,
           Twitter.abi,
           signer
         );

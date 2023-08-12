@@ -18,11 +18,17 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.17",
   networks: {
     optimism_Testnet: {
       url: process.env.ALCHEMY_RPC,
       accounts: [process.env.ACCOUNT_PRIVATE_KEY],
+    },
+    mode_Testnet: {
+      url: process.env.MODE_RPC,
+      accounts: [process.env.ACCOUNT_PRIVATE_KEY],
+      gasPrice: 35000000000,
+      saveDeployments: true,
     }
   }
 };

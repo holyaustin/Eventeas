@@ -26,9 +26,10 @@ function App() {
       let chainId = await ethereum.request({ method: 'eth_chainId'})
       console.log('Connected to chain:' + chainId)
 
-      const rinkebyChainId = '0x1a4'
+      const blockChainId = '0x1a4'
+      const blockChainIdMode = '0x397'
 
-      if (chainId !== rinkebyChainId) {
+      if (chainId !== blockChainIdMode) {
         alert('You are not connected to the Rinkeby Testnet!')
         return
       }
@@ -48,9 +49,10 @@ function App() {
     let chainId = await ethereum.request({ method: 'eth_chainId' })
     console.log('Connected to chain:' + chainId)
 
-    const rinkebyChainId = '0x1a4'
+    const blockChainId = '0x1a4'
+    const blockChainIdMode = '0x397'
 
-    if (chainId !== rinkebyChainId) {
+    if (chainId !== blockChainIdMode) {
       setCorrectNetwork(false)
       console.log('Error - Connected to the wrong chain, Connect to optimism Testnet',)
       alert('Wrong Network - Please connect to Optimism Testnet!')
@@ -103,7 +105,7 @@ function App() {
         />
          
         <h2 className='hidden text-xl lg:block lg:text-3xl'>
-          Join EventEAS today.
+          Join EventEAS thread today.
         </h2>
 
         <button
@@ -111,6 +113,13 @@ function App() {
           onClick={connectWallet}
           >
           Connect Wallet
+          </button>
+
+          <button
+          className='text-3xl font-bold px-12 border-4 border-sky-600 mb-10 hover:scale-110 transition duration-500 ease-in-out py-7 rounded-full'
+          onClick={connectWallet}
+          >
+          Verify with World ID
           </button>
 
         </div>

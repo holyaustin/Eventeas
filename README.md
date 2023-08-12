@@ -1,7 +1,8 @@
 ## EventEAS
 This is the repository to contain Dapp Twitter Clone using React and Solidity
 
-0x09c67f656805d3B4CB544ce11683928e62a9c4d7
+Optimism Testnet: 0x09c67f656805d3B4CB544ce11683928e62a9c4d7
+Mode Testnet: 0xe078fe7A93017F8e18c1C52E79632d0B94c56c26
 
 ## Eventeas
 <br />
