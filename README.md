@@ -1,8 +1,30 @@
 ## EventEAS
-This is the repository to contain Dapp Twitter Clone using React and Solidity
+This is the repository to contain Dapp Twitter Clone using React and Solidity. The following contract were deployed to these chains.
 
 Optimism Testnet: 0x09c67f656805d3B4CB544ce11683928e62a9c4d7
+<https://goerli-optimism.etherscan.io/address/0x09c67f656805d3b4cb544ce11683928e62a9c4d7>
+
 Mode Testnet: 0xe078fe7A93017F8e18c1C52E79632d0B94c56c26
+<https://sepolia.explorer.mode.network/address/0xe078fe7A93017F8e18c1C52E79632d0B94c56c26>
+
+Zora Goerli Testnet = 0x42Fc1d53EcF8B4c46989da0d44f07490668338c8
+<https://testnet.explorer.zora.energy/address/0x42Fc1d53EcF8B4c46989da0d44f07490668338c8>
+
+Base Testnet = 0xe078fe7A93017F8e18c1C52E79632d0B94c56c26
+<https://goerli.basescan.org/address/0xe078fe7a93017f8e18c1c52e79632d0b94c56c26>
+
+EAS
+Schema user : https://optimism-goerli-bedrock.easscan.org/schema/view/0x4a97c3aa0da89370da3a4db71c479f0144ebc7534deffd63fd3a7509193c5374
+
+UID:
+0x4a97c3aa0da89370da3a4db71c479f0144ebc7534deffd63fd3a7509193c5374
+
+Schema Tweet : https://optimism-goerli-bedrock.easscan.org/schema/view/0x413c4a703e9724216093b8188a58b81528e6393102eacfdb776f3a2d316725b8
+
+UID:
+0x413c4a703e9724216093b8188a58b81528e6393102eacfdb776f3a2d316725b8
+
+
 
 ## Eventeas
 <br />

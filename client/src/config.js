@@ -1,2 +1,4 @@
 export const TwitterContractAddress = "0x09c67f656805d3B4CB544ce11683928e62a9c4d7"
 export const TwitterContractAddressMode = "0x0b53D410113d7f9708A5dA4f80509aF9F5d3087e"
+export const TwitterContractAddressZora = "0x42Fc1d53EcF8B4c46989da0d44f07490668338c8"
+export const TwitterContractAddressBase = "0xe078fe7A93017F8e18c1C52E79632d0B94c56c26"

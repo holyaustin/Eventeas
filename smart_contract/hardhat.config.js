@@ -24,6 +24,16 @@ module.exports = {
       url: process.env.ALCHEMY_RPC,
       accounts: [process.env.ACCOUNT_PRIVATE_KEY],
     },
+    zora_Testnet: {
+      url: process.env.ZORA_RPC,
+      accounts: [process.env.ACCOUNT_PRIVATE_KEY],
+      gasPrice: 35000000000,
+      saveDeployments: true,
+    },
+    base_Testnet: {
+      url: process.env.BASE_RPC,
+      accounts: [process.env.ACCOUNT_PRIVATE_KEY],
+    },
     mode_Testnet: {
       url: process.env.MODE_RPC,
       accounts: [process.env.ACCOUNT_PRIVATE_KEY],

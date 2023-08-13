@@ -28,9 +28,11 @@ function App() {
 
       const blockChainId = '0x1a4'
       const blockChainIdMode = '0x397'
+      const blockChainIdZora = '0x3E7'
+      const blockChainIdBase = '0x14a33'
 
-      if (chainId !== blockChainIdMode) {
-        alert('You are not connected to the Rinkeby Testnet!')
+      if (chainId !== blockChainIdMode && chainId !== blockChainId  && chainId !== blockChainIdZora  && chainId !== blockChainIdBase) {
+        alert('You are not connected to the Right Testnet!')
         return
       }
 
@@ -51,11 +53,13 @@ function App() {
 
     const blockChainId = '0x1a4'
     const blockChainIdMode = '0x397'
+    const blockChainIdZora = '0x3E7'
+    const blockChainIdBase = '0x14a33'
 
-    if (chainId !== blockChainIdMode) {
+    if (chainId !== blockChainIdMode && chainId !== blockChainId  && chainId !== blockChainIdZora  && chainId !== blockChainIdBase) {
       setCorrectNetwork(false)
       console.log('Error - Connected to the wrong chain, Connect to optimism Testnet',)
-      alert('Wrong Network - Please connect to Optimism Testnet!')
+      alert('Wrong Network - Please connect to Optimism Testnet or Mode Testnet!')
     } else {
       setCorrectNetwork(true)
     }
@@ -63,7 +67,7 @@ function App() {
 
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
-    //connectWallet();
+    connectWallet();
     checkCorrectNetwork();
   });
 
