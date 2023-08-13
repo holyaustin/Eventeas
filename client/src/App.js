@@ -8,6 +8,7 @@ import { LoginMain } from './components/login/login-main.tsx';
 import { LoginFooter } from './components/login/login-footer.tsx';
 import { CustomIcon } from './components/ui/custom-icon.tsx';
 import { Button } from './components/ui/button.tsx';
+import { signIn, signOut, useSession } from "next-auth/react"
 
 function App() {
 
@@ -118,13 +119,21 @@ function App() {
           >
           Connect Wallet
           </button>
-
+          <a
+                href={`/api/auth/signin`}
+                onClick={(e) => {
+                  e.preventDefault()
+                  signIn("worldcoin") // when worldcoin is the only provider
+                  // signIn() // when there are multiple providers
+                }}
+              >
           <button
           className='text-3xl font-bold px-12 border-4 border-sky-600 mb-10 hover:scale-110 transition duration-500 ease-in-out py-7 rounded-full'
-          onClick={connectWallet}
+          //onClick={connectWallet}
           >
           Verify with World ID
           </button>
+              </a>
 
         </div>
         </div>
